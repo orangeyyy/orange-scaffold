@@ -1,0 +1,33 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "main": "<%if(babel) {%>lib/index.js<%}else {%>src/index.js<%}%>",<%if(commander) {%>
+  "bin": "bin/index.js", <%}%>
+  "scripts": {
+    "start": "<%if(babel) {%>node lib/index.js<%} else{%>node src/index.js<%}%>"<%if(babel) {%>,
+    "build": "babel src -d lib"<%}%>
+  },<%if(git) {%>
+  "repository": {
+    "type": "git",
+    "url": "<%= git %>"
+  },<% }%>
+  "keywords": [
+    "<%- keyWords.split(/\s+/).join('","')%>"
+  ],
+  "author": "<%= author %>",
+  "license" : "ISC",
+  "dependencies": {<% if(commander) {%>
+    "commander": "^2.13.0",<%}%>
+    "log4js": "^2.5.2"
+  },
+  "devDependencies": {<%if(babel) {%>
+    "@babel/cli": "^7.0.0-beta.39",
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/preset-stage-0": "^7.0.0-beta.39",<%}%>
+    "babel-eslint": "^8.2.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.17.0"
+  }
+}

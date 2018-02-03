@@ -1,0 +1,46 @@
+{
+  "name": "orange-scaffold",
+  "version": "0.0.1",
+  "description": "scaffold for multiple type of project",
+  "main": "lib/index.js",
+  "bin": {
+    "orange": "bin/index.js"
+  },
+  "scripts": {
+    "build": "babel src -d lib --ignore 'src/**/templates/' --copy-files --include-dotfiles",
+    "test": "mocha"
+  },
+  "keywords": [
+    "yeoman",
+    "generator",
+    "scaffold"
+  ],
+  "files": [
+    "src",
+    "bin",
+    "lib"
+  ],
+  "author": "orangeyyy",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.39",
+    "@babel/core": "^7.0.0-beta.39",
+    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/preset-stage-0": "^7.0.0-beta.39",
+    "babel-eslint": "^8.2.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.17.0",
+    "mocha": "^5.0.0",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "dependencies": {
+    "child-process-promise": "^2.2.1",
+    "commander": "^2.13.0",
+    "fs-extra": "^5.0.0",
+    "log4js": "^2.5.2",
+    "walker": "^1.0.7",
+    "yeoman-environment": "^2.0.5",
+    "yeoman-generator": "^2.0.2"
+  }
+}

@@ -1,0 +1,1 @@
+<%if (babel) {%><% include _babel-cli.js %><%} else {%><% include _cli.js %><%}%>
